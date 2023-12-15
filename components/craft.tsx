@@ -81,7 +81,7 @@ const Flex = ({ children, className, id, direction }: FlexProps) => {
 	return (
 		<div
 			className={clsx(
-				'flex flex-wrap gap-8 flex-col',
+				'flex flex-wrap gap-8 flex-col md:flex-row',
 				direction === 'row' ? 'md:flex-row' : direction === 'col' ? 'md:flex-col' : '',
 				className
 			)}
@@ -97,21 +97,11 @@ type GridProps = {
 	children: React.ReactNode;
 	className?: string;
 	id?: string;
-	cols?: number;
-	rows?: number;
 };
 
-const Grid = ({ children, className, id, cols, rows }: GridProps) => {
+const Grid = ({ children, className, id }: GridProps) => {
 	return (
-		<div
-			className={clsx(
-				'grid gap-8',
-				cols ? `grid-cols-${cols}` : '',
-				rows ? `grid-rows-${rows}` : '',
-				className
-			)}
-			id={id}
-		>
+		<div className={clsx('grid gap-8', className)} id={id}>
 			{children}
 		</div>
 	);
@@ -155,7 +145,7 @@ const H2 = ({ children, className, id }: H2Props) => {
 			className={clsx(
 				'text-3xl md:text-4xl font-normal',
 				'text-secondary-800 dark:text-secondary-200',
-				'mb-4',
+				'mb-8',
 				className
 			)}
 			id={id}
@@ -178,7 +168,7 @@ const H3 = ({ children, className, id }: H3Props) => {
 			className={clsx(
 				'text-2xl md:text-3xl font-normal',
 				'text-secondary-700 dark:text-secondary-200',
-				'mb-4',
+				'mb-8',
 				className
 			)}
 			id={id}
@@ -201,7 +191,7 @@ const H4 = ({ children, className, id }: H4Props) => {
 			className={clsx(
 				'text-xl md:text-2xl font-normal',
 				'text-secondary-800 dark:text-secondary-200',
-				'mb-4',
+				'mb-8',
 				className
 			)}
 			id={id}
@@ -224,7 +214,7 @@ const H5 = ({ children, className, id }: H5Props) => {
 			className={clsx(
 				'text-lg md:text-xl font-normal',
 				'text-secondary-800 dark:text-secondary-300',
-				'mb-4',
+				'mb-8',
 				className
 			)}
 			id={id}
@@ -247,7 +237,7 @@ const H6 = ({ children, className, id }: H6Props) => {
 			className={clsx(
 				'text-base font-normal md:text-lg ',
 				'text-secondary-700 dark:text-secondary-300',
-				'mb-4',
+				'mb-8',
 				className
 			)}
 			id={id}
@@ -269,7 +259,7 @@ const Prose = ({ children, className, id }: ProseProps) => {
 		<div
 			className={clsx(
 				'prose lg:prose-lg xl:prose-xl',
-				' prose-headings:font-normal prose-primary',
+				' prose-headings:font-normal prose-primary dark:prose-invert',
 				className
 			)}
 			id={id}
@@ -281,11 +271,41 @@ const Prose = ({ children, className, id }: ProseProps) => {
 
 // BUTTONS AND LINKS
 
-// Button Component
-type ButtonProps = {
+// Button Link Component
+type ButtonLinkProps = {
 	children: React.ReactNode;
+	type?: 'primary' | 'secondary' | 'tertiary';
 	className?: string;
 	id?: string;
+	href: string;
 };
 
-export { Layout, Main, Section, Container, Flex, Grid, H1, H2, H3, H4, H5, H6, Prose };
+const ButtonLink = ({ children, className, id, href, type = 'primary' }: ButtonLinkProps) => {
+	let buttonStyle;
+	switch (type) {
+		case 'primary':
+			buttonStyle = 'text-white bg-primary-600 hover:bg-primary-500 rounded-md shadow-sm';
+			break;
+		case 'secondary':
+			buttonStyle = 'border border-primary-600 hover:border-primary-500 rounded-md shadow-sm';
+			break;
+		case 'tertiary':
+			buttonStyle = 'underline text-primary-500 hover:text-primary-600';
+			break;
+	}
+	return (
+		<Link
+			href={href}
+			className={clsx(
+				'w-fit px-4 py-2 inline-block font-medium transition-all',
+				buttonStyle,
+				className
+			)}
+			id={id}
+		>
+			{children}
+		</Link>
+	);
+};
+
+export { Layout, Main, Section, Container, Flex, Grid, H1, H2, H3, H4, H5, H6, Prose, ButtonLink };

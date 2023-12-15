@@ -12,7 +12,7 @@ type craftTypes = {
 const craft: craftTypes = {
 	theme: {
 		// color options can be found at https://tailwindcss.com/docs/customizing-colors
-		primary: 'orange',
+		primary: 'stone',
 		secondary: 'neutral'
 		// change the font using `next/font` in `layout.tsx` in the app directory.
 		// check out the docs here: https://nextjs.org/docs/app/building-your-application/optimizing/fonts#google-fonts
