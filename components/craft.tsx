@@ -30,6 +30,8 @@ const Section = ({ children, className, style, id }: SectionProps) => {
 	);
 };
 
+// Container
+
 type ContainerProps = {
 	children: React.ReactNode;
 	className?: string;
@@ -45,4 +47,4 @@ const Container = ({ children, className, style, id }: ContainerProps) => {
 	);
 };
 
-export { Layout };
+export { Layout, Section, Container };
