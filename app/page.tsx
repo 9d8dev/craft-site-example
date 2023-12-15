@@ -20,7 +20,7 @@ export default function Home() {
 		<Main>
 			<Section>
 				<Container>
-					<H1>Welcome to Craft UI!</H1>
+					<H1>Welcome to Craft UI</H1>
 					<H2>Craft UI is a design system for NextJS Websites.</H2>
 					<H3>This is an example of an H3.</H3>
 					<H4>This is an example of an H4.</H4>
@@ -99,7 +99,7 @@ export default function Home() {
 							</p>
 						</blockquote>
 						<p>
-							Here's a link: <a href="#">Visit Tailwind CSS</a>
+							Here&apos;s a link: <a href="#">Visit Tailwind CSS</a>
 						</p>
 					</Prose>
 				</Container>
