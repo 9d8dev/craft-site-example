@@ -16,7 +16,7 @@ const Layout = ({ children, className }: LayoutProps) => {
 			lang="en"
 			className={clsx(
 				'bg-secondary-100 dark:bg-secondary-900',
-				'text-secondary-900 dark:text-secondary-100 antialiased'
+				'text-secondary-900 dark:text-secondary-100 antialiased font-light'
 			)}
 		>
 			<body className={className}>{children}</body>
@@ -81,8 +81,8 @@ const Flex = ({ children, className, id, direction }: FlexProps) => {
 	return (
 		<div
 			className={clsx(
-				'flex flex-wrap gap-8',
-				direction === 'row' ? 'flex-row' : direction === 'col' ? 'flex-col' : '',
+				'flex flex-wrap gap-8 flex-col',
+				direction === 'row' ? 'md:flex-row' : direction === 'col' ? 'md:flex-col' : '',
 				className
 			)}
 			id={id}
@@ -130,8 +130,9 @@ const H1 = ({ children, className, id }: H1Props) => {
 	return (
 		<h1
 			className={clsx(
-				'text-4xl font-bold',
+				'text-4xl md:text-6xl font-medium',
 				'text-secondary-900 dark:text-secondary-100',
+				'mb-8',
 				className
 			)}
 			id={id}
@@ -152,8 +153,9 @@ const H2 = ({ children, className, id }: H2Props) => {
 	return (
 		<h2
 			className={clsx(
-				'text-3xl font-bold',
-				'text-secondary-900 dark:text-secondary-100',
+				'text-3xl md:text-4xl font-normal',
+				'text-secondary-800 dark:text-secondary-200',
+				'mb-4',
 				className
 			)}
 			id={id}
@@ -174,8 +176,9 @@ const H3 = ({ children, className, id }: H3Props) => {
 	return (
 		<h3
 			className={clsx(
-				'text-2xl font-bold',
-				'text-secondary-900 dark:text-secondary-100',
+				'text-2xl md:text-3xl font-normal',
+				'text-secondary-700 dark:text-secondary-200',
+				'mb-4',
 				className
 			)}
 			id={id}
@@ -195,7 +198,12 @@ type H4Props = {
 const H4 = ({ children, className, id }: H4Props) => {
 	return (
 		<h4
-			className={clsx('text-xl font-bold', 'text-secondary-900 dark:text-secondary-100', className)}
+			className={clsx(
+				'text-xl md:text-2xl font-normal',
+				'text-secondary-800 dark:text-secondary-200',
+				'mb-4',
+				className
+			)}
 			id={id}
 		>
 			{children}
@@ -213,7 +221,12 @@ type H5Props = {
 const H5 = ({ children, className, id }: H5Props) => {
 	return (
 		<h5
-			className={clsx('text-lg font-bold', 'text-secondary-900 dark:text-secondary-100', className)}
+			className={clsx(
+				'text-lg md:text-xl font-normal',
+				'text-secondary-800 dark:text-secondary-300',
+				'mb-4',
+				className
+			)}
 			id={id}
 		>
 			{children}
@@ -232,8 +245,9 @@ const H6 = ({ children, className, id }: H6Props) => {
 	return (
 		<h6
 			className={clsx(
-				'text-base font-bold',
-				'text-secondary-900 dark:text-secondary-100',
+				'text-base font-normal md:text-lg ',
+				'text-secondary-700 dark:text-secondary-300',
+				'mb-4',
 				className
 			)}
 			id={id}
@@ -243,4 +257,35 @@ const H6 = ({ children, className, id }: H6Props) => {
 	);
 };
 
-export { Layout, Main, Section, Container, Flex, Grid, H1, H2, H3, H4, H5, H6 };
+// Prose Component
+type ProseProps = {
+	children: React.ReactNode;
+	className?: string;
+	id?: string;
+};
+
+const Prose = ({ children, className, id }: ProseProps) => {
+	return (
+		<div
+			className={clsx(
+				'prose lg:prose-lg xl:prose-xl',
+				' prose-headings:font-normal prose-primary',
+				className
+			)}
+			id={id}
+		>
+			{children}
+		</div>
+	);
+};
+
+// BUTTONS AND LINKS
+
+// Button Component
+type ButtonProps = {
+	children: React.ReactNode;
+	className?: string;
+	id?: string;
+};
+
+export { Layout, Main, Section, Container, Flex, Grid, H1, H2, H3, H4, H5, H6, Prose };
