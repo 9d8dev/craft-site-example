@@ -1,311 +1,355 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import clsx from 'clsx';
+import Link from "next/link";
+import Image from "next/image";
+import clsx from "clsx";
 
 // LAYOUT
 
 // Layout Component
 type LayoutProps = {
-	children: React.ReactNode;
-	className?: string;
+  children: React.ReactNode;
+  className?: string;
 };
 
 const Layout = ({ children, className }: LayoutProps) => {
-	return (
-		<html
-			lang="en"
-			className={clsx(
-				'bg-secondary-100 dark:bg-secondary-900',
-				'text-secondary-900 dark:text-secondary-100 antialiased font-light'
-			)}
-		>
-			<body className={className}>{children}</body>
-		</html>
-	);
+  return (
+    <html
+      lang="en"
+      className={clsx(
+        "bg-secondary-100 dark:bg-secondary-900",
+        "text-secondary-900 dark:text-secondary-100 antialiased font-light"
+      )}
+    >
+      <body className={className}>{children}</body>
+    </html>
+  );
 };
 
 // Main Component
 type MainProps = {
-	children: React.ReactNode;
-	className?: string;
-	id?: string;
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
 };
 
 const Main = ({ children, className, id }: MainProps) => {
-	return (
-		<main className={className} id={id}>
-			{children}
-		</main>
-	);
+  return (
+    <main className={className} id={id}>
+      {children}
+    </main>
+  );
 };
 
 // Section Component
 type SectionProps = {
-	children: React.ReactNode;
-	className?: string;
-	id?: string;
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
 };
 
 const Section = ({ children, className, id }: SectionProps) => {
-	return (
-		<section className={clsx('py-12', className)} id={id}>
-			{children}
-		</section>
-	);
+  return (
+    <section className={clsx("py-12", className)} id={id}>
+      {children}
+    </section>
+  );
 };
 
 // Container Component
 type ContainerProps = {
-	children: React.ReactNode;
-	className?: string;
-	id?: string;
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
 };
 
 const Container = ({ children, className, id }: ContainerProps) => {
-	return (
-		<div className={clsx('max-w-7xl mx-auto', 'p-8', className)} id={id}>
-			{children}
-		</div>
-	);
+  return (
+    <div className={clsx("max-w-7xl mx-auto", "p-8", className)} id={id}>
+      {children}
+    </div>
+  );
 };
 
 // Flex Component
 type FlexProps = {
-	children: React.ReactNode;
-	className?: string;
-	id?: string;
-	direction?: 'row' | 'col';
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
+  direction?: "row" | "col";
 };
 
 const Flex = ({ children, className, id, direction }: FlexProps) => {
-	return (
-		<div
-			className={clsx(
-				'flex flex-wrap gap-8 flex-col md:flex-row',
-				direction === 'row' ? 'md:flex-row' : direction === 'col' ? 'md:flex-col' : '',
-				className
-			)}
-			id={id}
-		>
-			{children}
-		</div>
-	);
+  return (
+    <div
+      className={clsx(
+        "flex flex-wrap gap-8 flex-col md:flex-row",
+        direction === "row"
+          ? "md:flex-row"
+          : direction === "col"
+          ? "md:flex-col"
+          : "",
+        className
+      )}
+      id={id}
+    >
+      {children}
+    </div>
+  );
 };
 
 // Grid Component
 type GridProps = {
-	children: React.ReactNode;
-	className?: string;
-	id?: string;
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
 };
 
 const Grid = ({ children, className, id }: GridProps) => {
-	return (
-		<div className={clsx('grid gap-8', className)} id={id}>
-			{children}
-		</div>
-	);
+  return (
+    <div className={clsx("grid gap-8", className)} id={id}>
+      {children}
+    </div>
+  );
 };
 
 // TYPOGRAPHY
 
 // H1 Component
 type H1Props = {
-	children: React.ReactNode;
-	className?: string;
-	id?: string;
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
 };
 
 const H1 = ({ children, className, id }: H1Props) => {
-	return (
-		<h1
-			className={clsx(
-				'text-4xl md:text-6xl font-medium',
-				'text-secondary-900 dark:text-secondary-100',
-				'mb-8',
-				className
-			)}
-			id={id}
-		>
-			{children}
-		</h1>
-	);
+  return (
+    <h1
+      className={clsx(
+        "text-4xl md:text-6xl font-medium",
+        "text-secondary-900 dark:text-secondary-100",
+        "mb-8",
+        className
+      )}
+      id={id}
+    >
+      {children}
+    </h1>
+  );
 };
 
 // H2 Component
 type H2Props = {
-	children: React.ReactNode;
-	className?: string;
-	id?: string;
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
 };
 
 const H2 = ({ children, className, id }: H2Props) => {
-	return (
-		<h2
-			className={clsx(
-				'text-3xl md:text-4xl font-normal',
-				'text-secondary-800 dark:text-secondary-200',
-				'mb-8',
-				className
-			)}
-			id={id}
-		>
-			{children}
-		</h2>
-	);
+  return (
+    <h2
+      className={clsx(
+        "text-3xl md:text-4xl font-normal",
+        "text-secondary-800 dark:text-secondary-200",
+        "mb-8",
+        className
+      )}
+      id={id}
+    >
+      {children}
+    </h2>
+  );
 };
 
 // H3 Component
 type H3Props = {
-	children: React.ReactNode;
-	className?: string;
-	id?: string;
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
 };
 
 const H3 = ({ children, className, id }: H3Props) => {
-	return (
-		<h3
-			className={clsx(
-				'text-2xl md:text-3xl font-normal',
-				'text-secondary-700 dark:text-secondary-200',
-				'mb-8',
-				className
-			)}
-			id={id}
-		>
-			{children}
-		</h3>
-	);
+  return (
+    <h3
+      className={clsx(
+        "text-2xl md:text-3xl font-normal",
+        "text-secondary-700 dark:text-secondary-200",
+        "mb-8",
+        className
+      )}
+      id={id}
+    >
+      {children}
+    </h3>
+  );
 };
 
 // H4 Component
 type H4Props = {
-	children: React.ReactNode;
-	className?: string;
-	id?: string;
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
 };
 
 const H4 = ({ children, className, id }: H4Props) => {
-	return (
-		<h4
-			className={clsx(
-				'text-xl md:text-2xl font-normal',
-				'text-secondary-800 dark:text-secondary-200',
-				'mb-8',
-				className
-			)}
-			id={id}
-		>
-			{children}
-		</h4>
-	);
+  return (
+    <h4
+      className={clsx(
+        "text-xl md:text-2xl font-normal",
+        "text-secondary-800 dark:text-secondary-200",
+        "mb-8",
+        className
+      )}
+      id={id}
+    >
+      {children}
+    </h4>
+  );
 };
 
 // H5 Component
 type H5Props = {
-	children: React.ReactNode;
-	className?: string;
-	id?: string;
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
 };
 
 const H5 = ({ children, className, id }: H5Props) => {
-	return (
-		<h5
-			className={clsx(
-				'text-lg md:text-xl font-normal',
-				'text-secondary-800 dark:text-secondary-300',
-				'mb-8',
-				className
-			)}
-			id={id}
-		>
-			{children}
-		</h5>
-	);
+  return (
+    <h5
+      className={clsx(
+        "text-lg md:text-xl font-normal",
+        "text-secondary-800 dark:text-secondary-300",
+        "mb-8",
+        className
+      )}
+      id={id}
+    >
+      {children}
+    </h5>
+  );
 };
 
 // H6 Component
 type H6Props = {
-	children: React.ReactNode;
-	className?: string;
-	id?: string;
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
 };
 
 const H6 = ({ children, className, id }: H6Props) => {
-	return (
-		<h6
-			className={clsx(
-				'text-base font-normal md:text-lg ',
-				'text-secondary-700 dark:text-secondary-300',
-				'mb-8',
-				className
-			)}
-			id={id}
-		>
-			{children}
-		</h6>
-	);
+  return (
+    <h6
+      className={clsx(
+        "text-base font-normal md:text-lg ",
+        "text-secondary-700 dark:text-secondary-300",
+        "mb-8",
+        className
+      )}
+      id={id}
+    >
+      {children}
+    </h6>
+  );
 };
 
 // Prose Component
 type ProseProps = {
-	children: React.ReactNode;
-	className?: string;
-	id?: string;
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
 };
 
 const Prose = ({ children, className, id }: ProseProps) => {
-	return (
-		<div
-			className={clsx(
-				'prose lg:prose-lg xl:prose-xl',
-				' prose-headings:font-normal prose-primary dark:prose-invert',
-				className
-			)}
-			id={id}
-		>
-			{children}
-		</div>
-	);
+  return (
+    <div
+      className={clsx(
+        "prose lg:prose-lg xl:prose-xl",
+        " prose-headings:font-normal prose-primary dark:prose-invert",
+        className
+      )}
+      id={id}
+    >
+      {children}
+    </div>
+  );
 };
 
 // BUTTONS AND LINKS
 
 // Button Link Component
 type ButtonLinkProps = {
-	children: React.ReactNode;
-	type?: 'primary' | 'secondary' | 'tertiary';
-	className?: string;
-	id?: string;
-	href: string;
+  children: React.ReactNode;
+  type?: "primary" | "secondary" | "tertiary";
+  className?: string;
+  id?: string;
+  href: string;
 };
 
-const ButtonLink = ({ children, className, id, href, type = 'primary' }: ButtonLinkProps) => {
-	let buttonStyle;
-	switch (type) {
-		case 'primary':
-			buttonStyle = 'text-white bg-primary-600 hover:bg-primary-500 rounded-md shadow-sm';
-			break;
-		case 'secondary':
-			buttonStyle = 'border border-primary-600 hover:border-primary-500 rounded-md shadow-sm';
-			break;
-		case 'tertiary':
-			buttonStyle = 'underline text-primary-500 hover:text-primary-600';
-			break;
-	}
-	return (
-		<Link
-			href={href}
-			className={clsx(
-				'w-fit px-4 py-2 inline-block font-medium transition-all',
-				buttonStyle,
-				className
-			)}
-			id={id}
-		>
-			{children}
-		</Link>
-	);
+const ButtonLink = ({
+  children,
+  className,
+  id,
+  href,
+  type = "primary",
+}: ButtonLinkProps) => {
+  let buttonStyle;
+  switch (type) {
+    case "primary":
+      buttonStyle =
+        "text-white bg-primary-600 hover:bg-primary-500 rounded-md shadow-sm";
+      break;
+    case "secondary":
+      buttonStyle =
+        "border border-primary-600 hover:border-primary-500 rounded-md shadow-sm";
+      break;
+    case "tertiary":
+      buttonStyle = "underline text-primary-500 hover:text-primary-600";
+      break;
+  }
+  return (
+    <Link
+      href={href}
+      className={clsx(
+        "w-fit px-4 py-2 inline-block font-medium transition-all",
+        buttonStyle,
+        className
+      )}
+      id={id}
+    >
+      {children}
+    </Link>
+  );
 };
 
-export { Layout, Main, Section, Container, Flex, Grid, H1, H2, H3, H4, H5, H6, Prose, ButtonLink };
+// Inline Link Component
+type InlineLinkProps = {
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
+  href: string;
+};
+
+const InlineLink = ({ children, className, id, href }: InlineLinkProps) => {
+  return (
+    <Link id={id} className={clsx(className)} href={href}>
+      {children}
+    </Link>
+  );
+};
+
+export {
+  Layout,
+  Main,
+  Section,
+  Container,
+  Flex,
+  Grid,
+  H1,
+  H2,
+  H3,
+  H4,
+  H5,
+  H6,
+  Prose,
+  ButtonLink,
+  InlineLink,
+};
