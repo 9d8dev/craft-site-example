@@ -1,90 +1,85 @@
-import {
-  Main,
-  Section,
-  Container,
-  H1,
-  H2,
-  H3,
-  H4,
-  H5,
-  H6,
-  Prose,
-  Flex,
-  Grid,
-  ButtonLink,
-  InlineLink,
-} from "@/components/craft";
-import Image from "next/image";
+import * as Typography from "@/components/craft/typography";
+import * as Layout from "@/components/craft/layout";
 
 export default function Home() {
   return (
-    <Main>
-      <Section>
-        <Container>
-          <H1>Welcome to Craft UI</H1>
-          <H2>Craft UI is a design system for NextJS Websites.</H2>
-          <H3>This is an example of an H3.</H3>
-          <H4>This is an example of an H4.</H4>
-          <H5>This is an example of an H5.</H5>
-          <H6>This is an example of an H6.</H6>
+    <Layout.Main>
+      <Layout.Section>
+        <Layout.Container>
+          <Typography.H1>Welcome to Craft UI</Typography.H1>
+          <Typography.H2>
+            Craft UI is a design system for NextJS Websites.
+          </Typography.H2>
+          <Typography.H3>This is an example of an Typography.H3.</Typography.H3>
+          <Typography.H4>This is an example of an Typography.H4.</Typography.H4>
+          <Typography.H5>This is an example of an Typography.H5.</Typography.H5>
+          <Typography.H6>This is an example of an Typography.H6.</Typography.H6>
           <p>
             This is a paragraph with an{" "}
-            <InlineLink href="/">inline link</InlineLink>
+            <Typography.InlineLink href="/">inline link</Typography.InlineLink>
           </p>
-          <Flex className="!gap-2">
-            <ButtonLink href="/">Primary Button</ButtonLink>
-            <ButtonLink type="secondary" href="/">
-              Secondary Button
-            </ButtonLink>
-            <ButtonLink type="tertiary" href="/">
+          <Layout.Flex className="!gap-2">
+            <Typography.ButtonLink href="/">
               Primary Button
-            </ButtonLink>
-          </Flex>
-        </Container>
-      </Section>
+            </Typography.ButtonLink>
+            <Typography.ButtonLink type="secondary" href="/">
+              Secondary Button
+            </Typography.ButtonLink>
+            <Typography.ButtonLink type="tertiary" href="/">
+              Primary Button
+            </Typography.ButtonLink>
+          </Layout.Flex>
+        </Layout.Container>
+      </Layout.Section>
 
-      <Section>
-        <Container>
-          <H3>This is an example of the {"<Flex />"} component.</H3>
+      <Layout.Section>
+        <Layout.Container>
+          <Typography.H3>
+            This is an example of the {"<Layout.Flex />"} component.
+          </Typography.H3>
 
-          <H5>Flex Row Version:</H5>
-          <Flex direction="row">
+          <Typography.H5>Layout.Flex Row Version:</Typography.H5>
+          <Layout.Flex direction="row">
             <div className="w-96 h-96 bg-primary-400 opacity-25"></div>
             <div className="w-96 h-96 bg-primary-400 opacity-25"></div>
-          </Flex>
+          </Layout.Flex>
 
-          <H5 className="mt-8">Flex Col Version:</H5>
-          <Flex direction="col">
+          <Typography.H5 className="mt-8">
+            Layout.Flex Col Version:
+          </Typography.H5>
+          <Layout.Flex direction="col">
             <div className="w-full h-96 bg-primary-400 opacity-25"></div>
             <div className="w-full h-96 bg-primary-400 opacity-25"></div>
-          </Flex>
+          </Layout.Flex>
 
-          <H3 className="mt-8">
-            This is an example of the {"<Grid />"} component.
-          </H3>
+          <Typography.H3 className="mt-8">
+            This is an example of the {"<Layout.Grid />"} component.
+          </Typography.H3>
 
-          <H5>2 Col Version:</H5>
-          <Grid className="grid-cols-2">
+          <Typography.H5>2 Col Version:</Typography.H5>
+          <Layout.Grid className="Layout.Grid-cols-2">
             <div className="w-full h-96 bg-primary-400 opacity-25"></div>
             <div className="w-full h-96 bg-primary-400 opacity-25"></div>
-          </Grid>
+          </Layout.Grid>
 
-          <H5 className="mt-8">3 Col 2 row Version:</H5>
-          <Grid className="grid-cols-3 grid-rows-2">
+          <Typography.H5 className="mt-8">3 Col 2 row Version:</Typography.H5>
+          <Layout.Grid className="Layout.Grid-cols-3 Layout.Grid-rows-2">
             <div className="w-full h-96 bg-primary-400 opacity-25"></div>
             <div className="w-full h-96 bg-primary-400 opacity-25"></div>
             <div className="w-full h-96 bg-primary-400 opacity-25"></div>
             <div className="w-full h-96 bg-primary-400 opacity-25"></div>
             <div className="w-full h-96 bg-primary-400 opacity-25"></div>
             <div className="w-full h-96 bg-primary-400 opacity-25"></div>
-          </Grid>
-        </Container>
-      </Section>
+          </Layout.Grid>
+        </Layout.Container>
+      </Layout.Section>
 
-      <Section>
-        <Container>
-          <Prose>
-            <h2>This is an example of the {"<Prose/>"} Section</h2>
+      <Layout.Section>
+        <Layout.Container>
+          <Typography.Prose>
+            <Typography.H2>
+              This is an example of the {"<Prose/>"} Layout.Section
+            </Typography.H2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec
               justo eget justo cursus ornare.
@@ -106,11 +101,14 @@ export default function Home() {
               </p>
             </blockquote>
             <p>
-              Here&apos;s a link: <a href="#">Visit Tailwind CSS</a>
+              Here&apos;s a link:{" "}
+              <Typography.InlineLink href="#">
+                Visit Tailwind CSS
+              </Typography.InlineLink>
             </p>
-          </Prose>
-        </Container>
-      </Section>
-    </Main>
+          </Typography.Prose>
+        </Layout.Container>
+      </Layout.Section>
+    </Layout.Main>
   );
 }
