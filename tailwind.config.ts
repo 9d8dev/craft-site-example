@@ -1,8 +1,10 @@
-import colors from "tailwindcss/colors";
-import craft from "./craft.config";
 import { fontFamily } from "tailwindcss/defaultTheme";
-const getColorScheme = (colorName: keyof typeof colors) =>
-  colors[colorName as keyof typeof colors] || colors.slate;
+
+// For using Tailwind Color systems instead of Shadcn
+// import craft from "./craft.config";
+// import colors from "tailwindcss/colors";
+// const getColorScheme = (colorName: keyof typeof colors) =>
+//   colors[colorName as keyof typeof colors] || colors.slate;
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -23,8 +25,17 @@ module.exports = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        primary: getColorScheme(craft.theme.primary),
-        secondary: getColorScheme(craft.theme.secondary),
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        // NOTE: Enable tailwind Colors here instead of Shadcn colors
+        // primary: getColorScheme(craft.theme.primary),
+        // secondary: getColorScheme(craft.theme.secondary),
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
