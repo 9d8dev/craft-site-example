@@ -1,9 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
 import clsx from "clsx";
+import Balancer from "react-wrap-balancer";
 
 // TYPOGRAPHY
-
 // H1 Component
 type H1Props = {
   children: React.ReactNode;
@@ -22,7 +21,7 @@ const H1 = ({ children, className, id }: H1Props) => {
       )}
       id={id}
     >
-      {children}
+      <Balancer>{children}</Balancer>
     </h1>
   );
 };
@@ -45,7 +44,7 @@ const H2 = ({ children, className, id }: H2Props) => {
       )}
       id={id}
     >
-      {children}
+      <Balancer>{children}</Balancer>
     </h2>
   );
 };
@@ -68,7 +67,7 @@ const H3 = ({ children, className, id }: H3Props) => {
       )}
       id={id}
     >
-      {children}
+      <Balancer>{children}</Balancer>
     </h3>
   );
 };
@@ -91,7 +90,7 @@ const H4 = ({ children, className, id }: H4Props) => {
       )}
       id={id}
     >
-      {children}
+      <Balancer>{children}</Balancer>
     </h4>
   );
 };
@@ -114,7 +113,7 @@ const H5 = ({ children, className, id }: H5Props) => {
       )}
       id={id}
     >
-      {children}
+      <Balancer>{children}</Balancer>
     </h5>
   );
 };
@@ -137,7 +136,7 @@ const H6 = ({ children, className, id }: H6Props) => {
       )}
       id={id}
     >
-      {children}
+      <Balancer>{children}</Balancer>
     </h6>
   );
 };
