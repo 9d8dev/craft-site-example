@@ -18,17 +18,6 @@ export default function Home() {
             This is a paragraph with an{" "}
             <Typography.InlineLink href="/">inline link</Typography.InlineLink>
           </p>
-          <Layout.Flex className="!gap-2">
-            <Typography.ButtonLink href="/">
-              Primary Button
-            </Typography.ButtonLink>
-            <Typography.ButtonLink type="secondary" href="/">
-              Secondary Button
-            </Typography.ButtonLink>
-            <Typography.ButtonLink type="tertiary" href="/">
-              Primary Button
-            </Typography.ButtonLink>
-          </Layout.Flex>
         </Layout.Container>
       </Layout.Section>
 
