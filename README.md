@@ -14,15 +14,6 @@
 
 ### Parts
 
-- Typography (typography.tsx)
-  - h1, h2, h3, h4, h5, h6
-  - ul, ol, li, p
-  - a, strong, em, del, code, hr
-  - table, thead, tbody, tr, th, td
-  - img, figure, figcaption
-  - pre, code
-  - blockquote
-  - hr
 - Layout (layout.tsx)
   - section
   - container
