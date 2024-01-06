@@ -199,6 +199,174 @@ const InlineLink = ({
   );
 };
 
+// SPECIALTY
+// Blockquote Component
 
+type BlockquoteProps = {
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
+};
 
-export { H1, H2, H3, H4, H5, H6, Prose, InlineLink };
+const Blockquote = ({ children, className, id }: BlockquoteProps) => {
+  return (
+    <blockquote
+      className={clsx(
+        "border-l-2 border-primary-400 dark:border-primary-100",
+        "font-normal italic text-primary-600 dark:text-primary-200",
+        "pl-4",
+        className
+      )}
+      id={id}
+    >
+      {children}
+    </blockquote>
+  );
+};
+
+// ul Component
+type UlProps = {
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
+};
+
+const Ul = ({ children, className, id }: UlProps) => {
+  return (
+    <ul
+      className={clsx(
+        "list-disc list-inside",
+        "text-primary-600 dark:text-primary-200",
+        className
+      )}
+      id={id}
+    >
+      {children}
+    </ul>
+  );
+};
+
+// ol Component
+
+type OlProps = {
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
+};
+
+const Ol = ({ children, className, id }: OlProps) => {
+  return (
+    <ol
+      className={clsx(
+        "list-decimal list-inside",
+        "text-primary-600 dark:text-primary-200",
+        className
+      )}
+      id={id}
+    >
+      {children}
+    </ol>
+  );
+};
+
+// li Component
+
+type LiProps = {
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
+};
+
+const Li = ({ children, className, id }: LiProps) => {
+  return (
+    <li
+      className={clsx("text-primary-600 dark:text-primary-200", className)}
+      id={id}
+    >
+      {children}
+    </li>
+  );
+};
+
+// Lead Component
+
+type LeadProps = {
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
+};
+
+const Lead = ({ children, className, id }: LeadProps) => {
+  return (
+    <p className={clsx("text-lg text-muted-foreground", className)} id={id}>
+      {children}
+    </p>
+  );
+};
+
+// Large Component
+
+type LargeProps = {
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
+};
+
+const Large = ({ children, className, id }: LargeProps) => {
+  return (
+    <p className={clsx("text-xl text-muted-foreground", className)} id={id}>
+      {children}
+    </p>
+  );
+};
+
+// Small Component
+
+type SmallProps = {
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
+};
+
+const Small = ({ children, className, id }: SmallProps) => {
+  return (
+    <p className={clsx("text-sm text-muted-foreground", className)} id={id}>
+      {children}
+    </p>
+  );
+};
+
+// Muted Component
+
+type MutedProps = {
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
+};
+
+const Muted = ({ children, className, id }: MutedProps) => {
+  return (
+    <p className={clsx("text-muted-foreground", className)} id={id}>
+      {children}
+    </p>
+  );
+};
+
+export {
+  H1,
+  H2,
+  H3,
+  H4,
+  H5,
+  H6,
+  Prose,
+  InlineLink,
+  Blockquote,
+  Ul,
+  Ol,
+  Li,
+  Lead,
+  Large,
+  Small,
+  Muted,
+};
