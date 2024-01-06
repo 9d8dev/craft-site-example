@@ -79,36 +79,14 @@ const Container = ({ children, className, id }: ContainerProps) => {
   );
 };
 
-// Prose Component
-type ProseProps = {
-  children: React.ReactNode;
-  className?: string;
-  id?: string;
-};
-
-const Prose = ({ children, className, id }: ProseProps) => {
-  return (
-    <div
-      className={clsx(
-        "prose dark:prose-invert md:prose-lg lg:prose-xl",
-        "prose-headings:font-normal prose-primary dark:prose-invert",
-        className
-      )}
-      id={id}
-    >
-      {children}
-    </div>
-  );
-};
-
-// Prose Component
+// Article Component
 type ArticleProps = {
   children: React.ReactNode;
   className?: string;
   id?: string;
 };
 
-const Article = ({ children, className, id }: ProseProps) => {
+const Article = ({ children, className, id }: ArticleProps) => {
   return (
     <article
       className={clsx(
@@ -123,4 +101,4 @@ const Article = ({ children, className, id }: ProseProps) => {
   );
 };
 
-export { Layout, Main, Section, Container, Article, Prose };
+export { Layout, Main, Section, Container, Article };
