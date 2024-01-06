@@ -175,7 +175,15 @@ type InlineLinkProps = {
 
 const InlineLink = ({ children, className, id, href }: InlineLinkProps) => {
   return (
-    <Link id={id} className={clsx(className)} href={href}>
+    <Link
+      id={id}
+      className={clsx(
+        "border-b border-b-primary-400 dark:border-b-primary-100",
+        "hover:border-b-primary-600 dark:hover:border-b-primary-200",
+        className
+      )}
+      href={href}
+    >
       {children}
     </Link>
   );
