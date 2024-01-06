@@ -48,10 +48,7 @@ export default function Home() {
               </p>
             </blockquote>
             <p>
-              Here&apos;s a link:{" "}
-              <Typography.InlineLink href="#">
-                Visit Tailwind CSS
-              </Typography.InlineLink>
+              Here&apos;s a link: <a href="#">Visit Tailwind CSS</a>
             </p>
           </Typography.Prose>
         </Layout.Container>
