@@ -152,8 +152,8 @@ const Prose = ({ children, className, id }: ProseProps) => {
   return (
     <div
       className={clsx(
-        "prose lg:prose-lg xl:prose-xl",
-        " prose-headings:font-normal prose-primary dark:prose-invert",
+        "prose",
+        "prose-headings:font-normal prose-primary dark:prose-invert",
         className
       )}
       id={id}
@@ -171,22 +171,34 @@ type InlineLinkProps = {
   className?: string;
   id?: string;
   href: string;
+  outbound?: boolean;
 };
 
-const InlineLink = ({ children, className, id, href }: InlineLinkProps) => {
+const InlineLink = ({
+  children,
+  className,
+  id,
+  href,
+  outbound,
+}: InlineLinkProps) => {
   return (
     <Link
       id={id}
       className={clsx(
         "border-b border-b-primary-400 dark:border-b-primary-100",
+        "font-normal text-primary-600 dark:text-primary-200",
         "hover:border-b-primary-600 dark:hover:border-b-primary-200",
         className
       )}
       href={href}
+      target={outbound ? "_blank" : undefined}
+      rel={outbound ? "noopener noreferrer" : undefined}
     >
       {children}
     </Link>
   );
 };
+
+
 
 export { H1, H2, H3, H4, H5, H6, Prose, InlineLink };
