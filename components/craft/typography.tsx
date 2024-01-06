@@ -164,52 +164,7 @@ const Prose = ({ children, className, id }: ProseProps) => {
   );
 };
 
-// BUTTONS AND LINKS
-
-// Button Link Component
-type ButtonLinkProps = {
-  children: React.ReactNode;
-  type?: "primary" | "secondary" | "tertiary";
-  className?: string;
-  id?: string;
-  href: string;
-};
-
-const ButtonLink = ({
-  children,
-  className,
-  id,
-  href,
-  type = "primary",
-}: ButtonLinkProps) => {
-  let buttonStyle;
-  switch (type) {
-    case "primary":
-      buttonStyle =
-        "text-white bg-primary-600 hover:bg-primary-500 rounded-md shadow-sm";
-      break;
-    case "secondary":
-      buttonStyle =
-        "border border-primary-600 hover:border-primary-500 rounded-md shadow-sm";
-      break;
-    case "tertiary":
-      buttonStyle = "underline text-primary-500 hover:text-primary-600";
-      break;
-  }
-  return (
-    <Link
-      href={href}
-      className={clsx(
-        "w-fit px-4 py-2 inline-block font-medium transition-all",
-        buttonStyle,
-        className
-      )}
-      id={id}
-    >
-      {children}
-    </Link>
-  );
-};
+// LINKS
 
 // Inline Link Component
 type InlineLinkProps = {
@@ -227,4 +182,4 @@ const InlineLink = ({ children, className, id, href }: InlineLinkProps) => {
   );
 };
 
-export { H1, H2, H3, H4, H5, H6, Prose, ButtonLink, InlineLink };
+export { H1, H2, H3, H4, H5, H6, Prose, InlineLink };
