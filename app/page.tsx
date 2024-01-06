@@ -23,48 +23,6 @@ export default function Home() {
 
       <Layout.Section>
         <Layout.Container>
-          <Typography.H3>
-            This is an example of the {"<Layout.Flex />"} component.
-          </Typography.H3>
-
-          <Typography.H5>Layout.Flex Row Version:</Typography.H5>
-          <Layout.Flex direction="row">
-            <div className="w-96 h-96 bg-primary-400 opacity-25"></div>
-            <div className="w-96 h-96 bg-primary-400 opacity-25"></div>
-          </Layout.Flex>
-
-          <Typography.H5 className="mt-8">
-            Layout.Flex Col Version:
-          </Typography.H5>
-          <Layout.Flex direction="col">
-            <div className="w-full h-96 bg-primary-400 opacity-25"></div>
-            <div className="w-full h-96 bg-primary-400 opacity-25"></div>
-          </Layout.Flex>
-
-          <Typography.H3 className="mt-8">
-            This is an example of the {"<Layout.Grid />"} component.
-          </Typography.H3>
-
-          <Typography.H5>2 Col Version:</Typography.H5>
-          <Layout.Grid className="Layout.Grid-cols-2">
-            <div className="w-full h-96 bg-primary-400 opacity-25"></div>
-            <div className="w-full h-96 bg-primary-400 opacity-25"></div>
-          </Layout.Grid>
-
-          <Typography.H5 className="mt-8">3 Col 2 row Version:</Typography.H5>
-          <Layout.Grid className="Layout.Grid-cols-3 Layout.Grid-rows-2">
-            <div className="w-full h-96 bg-primary-400 opacity-25"></div>
-            <div className="w-full h-96 bg-primary-400 opacity-25"></div>
-            <div className="w-full h-96 bg-primary-400 opacity-25"></div>
-            <div className="w-full h-96 bg-primary-400 opacity-25"></div>
-            <div className="w-full h-96 bg-primary-400 opacity-25"></div>
-            <div className="w-full h-96 bg-primary-400 opacity-25"></div>
-          </Layout.Grid>
-        </Layout.Container>
-      </Layout.Section>
-
-      <Layout.Section>
-        <Layout.Container>
           <Typography.Prose>
             <Typography.H2>
               This is an example of the {"<Prose/>"} Layout.Section

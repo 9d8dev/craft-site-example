@@ -69,46 +69,4 @@ const Container = ({ children, className, id }: ContainerProps) => {
   );
 };
 
-// Flex Component
-type FlexProps = {
-  children: React.ReactNode;
-  className?: string;
-  id?: string;
-  direction?: "row" | "col";
-};
-
-const Flex = ({ children, className, id, direction }: FlexProps) => {
-  return (
-    <div
-      className={clsx(
-        "flex flex-wrap gap-8 flex-col md:flex-row",
-        direction === "row"
-          ? "md:flex-row"
-          : direction === "col"
-          ? "md:flex-col"
-          : "",
-        className
-      )}
-      id={id}
-    >
-      {children}
-    </div>
-  );
-};
-
-// Grid Component
-type GridProps = {
-  children: React.ReactNode;
-  className?: string;
-  id?: string;
-};
-
-const Grid = ({ children, className, id }: GridProps) => {
-  return (
-    <div className={clsx("grid gap-8", className)} id={id}>
-      {children}
-    </div>
-  );
-};
-
-export { Layout, Main, Section, Container, Flex, Grid };
+export { Layout, Main, Section, Container };
