@@ -1,14 +1,23 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { Manrope, Instrument_Serif } from "next/font/google";
 import * as Craft from "@/components/craft/layout";
 import Nav from "@/components/craft/section/nav";
 import Footer from "@/components/craft/section/footer";
 import "./globals.css";
 
-const font = Manrope({ subsets: ["latin"] });
+const manrope = Manrope({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-sans",
+});
+
+const instrument_serif = Instrument_Serif({
+  weight: "400",
+  variable: "--font-serif",
+});
 
 export const metadata: Metadata = {
-  title: "Craft UI",
+  title: "Craft UI | Design System for NextJS Websites",
   description:
     "Craft UI is a design system and component library for building NextJS Websites rapidly uising Tailwind, Shadcn/ui, and Typescript. Created by Bridger Tower and Cameron Youngblood.",
 };
@@ -19,7 +28,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <Craft.Layout className={font.className}>
+    <Craft.Layout
+      className={`${manrope.variable} ${instrument_serif.variable}`}
+    >
       <Nav />
       {children}
       <Footer />

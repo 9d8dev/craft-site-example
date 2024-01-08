@@ -38,7 +38,9 @@ const Nav = ({ className, children, id }: NavProps) => {
         {children}
         <div className="flex items-center gap-2">
           <NavMenu />
-          <Button>Button</Button>
+          <Button asChild>
+            <Link href="https://github.com/9d8dev/craft">Get Started</Link>
+          </Button>
         </div>
       </div>
     </nav>

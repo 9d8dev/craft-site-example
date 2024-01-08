@@ -3,22 +3,14 @@ import Balancer from "react-wrap-balancer";
 import Image from "next/image";
 import Vercel from "@/public/vercel.svg";
 import Photo from "@/public/photo.jpg";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
     <Craft.Main>
       <Craft.Section>
         <Craft.Container>
-          <div className="relative border shadow-sm mb-12 w-full lg:h-96 md:h-72 h-48 rounded-md overflow-hidden">
-            <Image
-              src={Photo}
-              alt="homepage image for craft ui"
-              className="not-prose object-cover object-center max-w-full h-full"
-              placeholder="blur"
-            />
-          </div>
-
-          <h1>
+          <h1 className="font-serif lg:text-8xl">
             <Balancer>Welcome to Craft UI</Balancer>
           </h1>
           <h2>
@@ -27,6 +19,19 @@ export default function Home() {
               shadcn/ui, radix ui, and tailwindcss.
             </Balancer>
           </h2>
+          <div className="relative border shadow-sm mb-12 w-full lg:h-96 md:h-72 h-48 rounded-md overflow-hidden">
+            <Image
+              src={Photo}
+              alt="homepage image for craft ui"
+              className="not-prose object-cover object-center max-w-full h-full"
+              placeholder="blur"
+            />
+          </div>
+        </Craft.Container>
+      </Craft.Section>
+
+      <Craft.Section>
+        <Craft.Container>
           <h3>This is an example of an H3</h3>
           <h4>This is an example of an H4</h4>
           <h5>This is an example of an H5</h5>
@@ -41,6 +46,7 @@ export default function Home() {
           </p>
         </Craft.Container>
       </Craft.Section>
+
       <Craft.Section>
         <Craft.Container>
           <Craft.Article>
