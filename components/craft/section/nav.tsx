@@ -3,7 +3,6 @@ import Image from "next/image";
 import Logo from "@/public/logo.svg";
 import { cn } from "@/lib/utils";
 import { Button } from "../../ui/button";
-import { ModeToggle } from "../theme/theme-toggle";
 import { NavMenu } from "./nav-menu";
 
 type NavProps = {
@@ -36,7 +35,6 @@ const Nav = ({ className, children, id }: NavProps) => {
         <div className="flex items-center gap-2">
           <NavMenu />
           <Button>Button</Button>
-          <ModeToggle />
         </div>
       </div>
     </nav>
