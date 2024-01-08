@@ -4,15 +4,15 @@
 
 ### Dependencies
 
-- [tailwindcss](https://tailwindcss.com/)
+- [Tailwind](https://tailwindcss.com/)
   - [Tailwind Typography](https://tailwindcss.com/docs/typography-plugin)
-  - Tailwind Animatea
-  - Tailwind Merge
-- [typescript](https://www.typescriptlang.org/)
-- [react-wrap-balancer](https://github.com/shuding/react-wrap-balancer)
+  - [Tailwind Animate](https://tailwindcss.com/docs/animation)
+- [Tailwind Merge](https://github.com/dcastil/tailwind-merge)
+- [Typescript](https://www.typescriptlang.org/)
+- [React Wrap Balancer](https://github.com/shuding/react-wrap-balancer)
+- [Lucide Icons](https://lucide.dev/)
 - [clsx](https://github.com/lukeed/clsx)
 - [shadcn/ui](https://ui.shadcn.com/)
-- [Lucide Icons](https://lucide.dev/)
 
 ### Parts
 
