@@ -12,6 +12,7 @@ const manrope = Manrope({
 });
 
 const instrument_serif = Instrument_Serif({
+  subsets: ["latin"],
   weight: "400",
   variable: "--font-serif",
 });
