@@ -14,8 +14,8 @@ npm install clsx
 ### Dependencies
 
 - [Tailwind](https://tailwindcss.com/)
-  - [Tailwind Typography](https://tailwindcss.com/docs/typography-plugin)
-  - [Tailwind Animate](https://tailwindcss.com/docs/animation)
+  - *Plugin:* [Tailwind Typography](https://tailwindcss.com/docs/typography-plugin)
+  - *Plugin:* [Tailwind Animate](https://tailwindcss.com/docs/animation)
 - [Tailwind Merge](https://github.com/dcastil/tailwind-merge)
 - [Typescript](https://www.typescriptlang.org/)
 - [React Wrap Balancer](https://github.com/shuding/react-wrap-balancer)
@@ -23,7 +23,13 @@ npm install clsx
 - [clsx](https://github.com/lukeed/clsx)
 - [shadcn/ui](https://ui.shadcn.com/)
 
-### Parts
+### Components
+
+To import all components:
+
+```tsx
+import * as Layout from "@/components/craft/layout";
+```
 
 - Layout (layout.tsx)
   - [`<Layout />`](#layout-component)
@@ -31,8 +37,6 @@ npm install clsx
   - [`<Section />`](#section-component)
   - [`<Container />`](#container-component)
   - [`<Article />`](#article-component)
-
-Certainly! The provided code snippet is a collection of React components designed for layout and content structuring in a web application. Let's break down each component to understand its purpose and usage:
 
 #### `Layout` Component
 
