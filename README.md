@@ -56,7 +56,7 @@ Certainly! The provided code snippet is a collection of React components designe
   </Main>
   ```
 
-### `Section` Component
+#### `Section` Component
 
 - **Purpose:** Defines a thematic grouping of content, typically with a common theme or subject.
 - **Props:**
