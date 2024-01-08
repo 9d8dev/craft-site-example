@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { cn } from "@/lib/utils";
 import { ThemeProvider } from "./theme/theme-provider";
 
 // LAYOUT
@@ -10,9 +10,8 @@ type LayoutProps = {
 
 const Layout = ({ children, className }: LayoutProps) => {
   return (
-    <html lang="en" className={clsx("antialiased", className)}>
+    <html lang="en" className={cn("antialiased", className)}>
       <body className={className}>
-        {" "}
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -36,7 +35,7 @@ type MainProps = {
 const Main = ({ children, className, id }: MainProps) => {
   return (
     <main
-      className={clsx(
+      className={cn(
         // General Prose
         "prose dark:prose-invert md:prose-lg lg:prose-xl max-w-none",
         // Prose Headings
@@ -63,7 +62,7 @@ type SectionProps = {
 
 const Section = ({ children, className, id }: SectionProps) => {
   return (
-    <section className={clsx("py-12", className)} id={id}>
+    <section className={cn("py-12", className)} id={id}>
       {children}
     </section>
   );
@@ -78,7 +77,7 @@ type ContainerProps = {
 
 const Container = ({ children, className, id }: ContainerProps) => {
   return (
-    <div className={clsx("max-w-5xl mx-auto", "p-6 sm:p-8", className)} id={id}>
+    <div className={cn("max-w-5xl mx-auto", "p-6 sm:p-8", className)} id={id}>
       {children}
     </div>
   );
@@ -94,7 +93,7 @@ type ArticleProps = {
 const Article = ({ children, className, id }: ArticleProps) => {
   return (
     <article
-      className={clsx(
+      className={cn(
         "prose dark:prose-invert md:prose-lg lg:prose-xl",
         "prose-headings:font-normal prose-main dark:prose-invert",
         className

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import * as Craft from "@/components/craft/layout";
-import Nav from "@/components/craft/nav";
+import Nav from "@/components/craft/section/nav";
 import "./globals.css";
 
 const font = Manrope({ subsets: ["latin"] });
