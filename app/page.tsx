@@ -2,12 +2,22 @@ import * as Craft from "@/components/craft/layout";
 import Balancer from "react-wrap-balancer";
 import Image from "next/image";
 import Vercel from "@/public/vercel.svg";
+import Photo from "@/public/photo.jpg";
 
 export default function Home() {
   return (
     <Craft.Main>
       <Craft.Section>
         <Craft.Container>
+          <div className="relative border shadow-sm mb-12 w-full lg:h-96 md:h-72 h-48 rounded-md overflow-hidden">
+            <Image
+              src={Photo}
+              alt="homepage image for craft ui"
+              className="not-prose object-cover object-center max-w-full h-full"
+              placeholder="blur"
+            />
+          </div>
+
           <h1>
             <Balancer>Welcome to Craft UI</Balancer>
           </h1>

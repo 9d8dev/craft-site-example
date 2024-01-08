@@ -14,7 +14,10 @@ type NavProps = {
 const Nav = ({ className, children, id }: NavProps) => {
   return (
     <nav
-      className={cn("sticky top-0 bg-background drop-shadow-sm", className)}
+      className={cn(
+        "sticky z-50 top-0 bg-background drop-shadow-sm",
+        className
+      )}
       id={id}
     >
       <div
