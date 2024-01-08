@@ -57,7 +57,7 @@ const links = [
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="border-t drop-shadow-sm">
       <Craft.Section>
         <Craft.Container className="grid gap-6 md:grid-cols-2">
           <div className="grid gap-6">

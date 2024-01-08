@@ -15,7 +15,8 @@ const Nav = ({ className, children, id }: NavProps) => {
   return (
     <nav
       className={cn(
-        "sticky z-50 top-0 bg-background drop-shadow-sm",
+        "sticky z-50 top-0 bg-background",
+        "border-b drop-shadow-sm",
         className
       )}
       id={id}
