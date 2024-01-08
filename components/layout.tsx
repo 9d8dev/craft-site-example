@@ -38,7 +38,7 @@ const Main = ({ children, className, id }: MainProps) => {
         // Prose Headings
         "prose-headings:font-medium",
         // Inline Links
-        "prose-a:border-b prose-a:border-b-primary-400 dark:prose-a:border-b-primary-100 prose-a:font-normal prose-a:text-primary-600 dark:prose-a:text-primary-200 hover:prose-a:border-b-primary-600 dark:hover:prose-a:border-b-primary-200 prose-a:no-underline",
+        "prose-a:border-b prose-a:border-b-primary-400 dark:prose-a:border-b-primary-100 prose-a:font-normal prose-a:text-primary-600 dark:prose-a:text-primary-200 hover:prose-a:border-b-primary-600 hover:prose-a:opacity-75 dark:hover:prose-a:border-b-primary-200 prose-a:no-underline prose-a:transition-all",
         // Blockquotes
         "prose-blockquote:not-italic",
         className

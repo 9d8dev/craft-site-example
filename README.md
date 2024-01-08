@@ -2,9 +2,9 @@
 
 # Craft UI
 
-## Craft UI is a design system and collection of components for developing marketing websites
+Craft UI is a design system and collection of components for developing marketing websites
 
-### Dependencies
+## Dependencies
 
 - [Tailwind](https://tailwindcss.com/)
   - *Plugin:* [Tailwind Typography](https://tailwindcss.com/docs/typography-plugin)
@@ -16,22 +16,22 @@
 - [clsx](https://github.com/lukeed/clsx)
 - [shadcn/ui](https://ui.shadcn.com/)
 
-### Components
+## Components
 
 To import all Layout components:
 
 ```tsx
-import * as Layout from "@/components/layout";
+import * as Craft from "@/components/layout";
 ```
 
 - Layout (layout.tsx)
-  - [`<Layout />`](#layout-component)
-  - [`<Main />`](#main-component)
-  - [`<Section />`](#section-component)
-  - [`<Container />`](#container-component)
-  - [`<Article />`](#article-component)
+  - [`<Craft.Layout />`](#layout-component)
+  - [`<Craft.Main />`](#main-component)
+  - [`<Craft.Section />`](#section-component)
+  - [`<Craft.Container />`](#container-component)
+  - [`<Craft.Article />`](#article-component)
 
-#### `Layout` Component
+### `Layout` Component
 
 - **Purpose:** Acts as the root layout component for the application.
 - **Props:**
@@ -46,7 +46,7 @@ import * as Layout from "@/components/layout";
   </Layout>
   ```
 
-#### `Main` Component
+### `Main` Component
 
 - **Purpose:** Serves as the main content area of a page.
 - **Props:**
@@ -62,7 +62,7 @@ import * as Layout from "@/components/layout";
   </Main>
   ```
 
-#### `Section` Component
+### `Section` Component
 
 - **Purpose:** Defines a thematic grouping of content, typically with a common theme or subject.
 - **Props:**
@@ -78,7 +78,7 @@ import * as Layout from "@/components/layout";
   </Section>
   ```
 
-#### `Container` Component
+### `Container` Component
 
 - **Purpose:** Used to constrain the width of the content and center it.
 - **Props:**
@@ -94,7 +94,7 @@ import * as Layout from "@/components/layout";
   </Container>
   ```
 
-#### `Article` Component
+### `Article` Component
 
 - **Purpose:** Used for writing an article, blog post, or any similar standalone content.
 - **Props:**
