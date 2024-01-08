@@ -1,6 +1,6 @@
 import { fontFamily } from "tailwindcss/defaultTheme";
 
-// For using Tailwind Color systems instead of Shadcn
+// For using Tailwind Color systems instead of Shadcn/ui
 import craft from "./craft.config";
 import colors from "tailwindcss/colors";
 const getColorScheme = (colorName: keyof typeof colors) =>
