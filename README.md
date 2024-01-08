@@ -1,5 +1,7 @@
 # Craft UI
 
+![craft](https://github.com/9d8dev/craft-ui/assets/57158102/de2f45fe-ed4f-4674-9f5e-68a057e00c05)
+
 ## Craft UI is a design system and collection of components for developing marketing websites
 
 ### Getting Started
