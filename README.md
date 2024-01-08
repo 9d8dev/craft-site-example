@@ -4,13 +4,6 @@
 
 ## Craft UI is a design system and collection of components for developing marketing websites
 
-### Getting Started
-
-```bash
-npm install -D @tailwindcss/typography
-npm install clsx
-```
-
 ### Dependencies
 
 - [Tailwind](https://tailwindcss.com/)
