@@ -8,7 +8,8 @@ const getColorScheme = (colorName: keyof typeof colors) =>
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: "class",
+  // Change this to "Class" if you want to disable dark mode
+  darkMode: "media",
   content: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}"],
   theme: {
     container: {
@@ -25,6 +26,7 @@ module.exports = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        // NOTE: Enable shadcn/ui Colors here instead of Tailwind colors
         // primary: {
         //   DEFAULT: "hsl(var(--primary))",
         //   foreground: "hsl(var(--primary-foreground))",
@@ -33,7 +35,6 @@ module.exports = {
         //   DEFAULT: "hsl(var(--secondary))",
         //   foreground: "hsl(var(--secondary-foreground))",
         // },
-        // NOTE: Enable tailwind Colors here instead of Shadcn colors
         primary: getColorScheme(craft.theme.primary),
         secondary: getColorScheme(craft.theme.secondary),
         destructive: {

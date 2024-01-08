@@ -13,6 +13,7 @@ const Layout = ({ children, className }: LayoutProps) => {
       lang="en"
       className={clsx(
         "text-secondary-900 dark:text-secondary-100 antialiased",
+        "bg-primary-50 dark:bg-primary-900",
         className
       )}
     >
