@@ -16,39 +16,27 @@ import {
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
+    title: "Typography",
+    href: "https://github.com/9d8dev/craft/wiki/components#typography",
     description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
+      "Styles for headings, paragraphs, lists, and other inline elements.",
   },
   {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
+    title: "Layout Components",
+    href: "https://github.com/9d8dev/craft/wiki/components#layout-components",
     description:
-      "For sighted users to preview content available behind a link.",
+      "Components that help you lay out your content, like Main, Section, and Container.",
   },
   {
-    title: "Progress",
-    href: "/docs/primitives/progress",
+    title: "Navigation",
+    href: "https://github.com/9d8dev/craft/wiki/components#nav-component",
     description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+      "A Navigation component that helps you build accessible navigation menus.",
   },
   {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
-  },
-  {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+    title: "Footer",
+    href: "https://github.com/9d8dev/craft/wiki/components#footer-component",
+    description: "A Footer component that helps you build footers.",
   },
 ];
 
@@ -67,23 +55,32 @@ export function NavMenu() {
                     href="/"
                   >
                     <div className="mb-2 mt-4 text-lg font-medium">
-                      shadcn/ui
+                      Craft UI
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
-                      Beautifully designed components that you can copy and
-                      paste into your apps. Accessible. Customizable. Open
-                      Source.
+                      Craft UI is a design system and component library for
+                      NextJS Marketing Sites built with Tailwind, shadcn/ui, and
+                      Typescript.
                     </p>
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/docs" title="Introduction">
+              <ListItem
+                href="https://github.com/9d8dev/craft"
+                title="Introduction"
+              >
                 Re-usable components built using Radix UI and Tailwind CSS.
               </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
+              <ListItem
+                href="https://github.com/9d8dev/craft"
+                title="Installation"
+              >
                 How to install dependencies and structure your app.
               </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
+              <ListItem
+                href="https://github.com/9d8dev/craft"
+                title="Typography"
+              >
                 Styles for headings, paragraphs, lists...etc
               </ListItem>
             </ul>
@@ -106,7 +103,11 @@ export function NavMenu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link
+            href="https://github.com/9d8dev/craft/wiki"
+            legacyBehavior
+            passHref
+          >
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Documentation
             </NavigationMenuLink>
