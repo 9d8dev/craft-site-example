@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { ThemeProvider } from "./theme/theme-provider";
 
 // LAYOUT
 // Layout Component
@@ -9,15 +10,18 @@ type LayoutProps = {
 
 const Layout = ({ children, className }: LayoutProps) => {
   return (
-    <html
-      lang="en"
-      className={clsx(
-        "text-secondary-900 dark:text-secondary-100 antialiased",
-        "bg-primary-50 dark:bg-primary-900",
-        className
-      )}
-    >
-      <body className={className}>{children}</body>
+    <html lang="en" className={clsx("antialiased", className)}>
+      <body className={className}>
+        {" "}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 };
@@ -38,7 +42,7 @@ const Main = ({ children, className, id }: MainProps) => {
         // Prose Headings
         "prose-headings:font-normal",
         // Inline Links
-        "prose-a:border-b prose-a:border-b-primary-400 dark:prose-a:border-b-primary-100 prose-a:font-normal prose-a:text-primary-600 dark:prose-a:text-primary-200 hover:prose-a:border-b-primary-600 hover:prose-a:opacity-75 dark:hover:prose-a:border-b-primary-200 prose-a:no-underline prose-a:transition-all",
+        "prose-a:border-b prose-a:border-b-primary dark:prose-a:border-b-primary prose-a:font-normal prose-a:text-primary dark:prose-a:text-primary hover:prose-a:border-b-primary hover:prose-a:opacity-75 dark:hover:prose-a:border-b-primary prose-a:no-underline prose-a:transition-all",
         // Blockquotes
         "prose-blockquote:not-italic",
         className
@@ -92,7 +96,7 @@ const Article = ({ children, className, id }: ArticleProps) => {
     <article
       className={clsx(
         "prose dark:prose-invert md:prose-lg lg:prose-xl",
-        "prose-headings:font-normal prose-primary dark:prose-invert",
+        "prose-headings:font-normal prose-main dark:prose-invert",
         className
       )}
       id={id}
