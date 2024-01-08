@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
+import * as Craft from "@/components/layout";
 import "./globals.css";
-import { Layout } from "@/components/layout";
 
 const font = Manrope({ subsets: ["latin"] });
 
@@ -16,5 +16,5 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <Layout className={font.className}>{children}</Layout>;
+  return <Craft.Layout className={font.className}>{children}</Craft.Layout>;
 }
