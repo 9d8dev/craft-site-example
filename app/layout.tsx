@@ -10,7 +10,7 @@ const font = Manrope({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Craft UI",
   description:
-    "Craft UI is a design system and component library for building NextJS Websites. Created by Bridger Tower and Cameron Youngblood.",
+    "Craft UI is a design system and component library for building NextJS Websites rapidly uising Tailwind, Shadcn/ui, and Typescript. Created by Bridger Tower and Cameron Youngblood.",
 };
 
 export default function RootLayout({

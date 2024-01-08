@@ -10,6 +10,7 @@ Craft UI is a design system and collection of components for developing marketin
 > - [Tailwind](https://tailwindcss.com/)
 > - [Tailwind Typography](https://tailwindcss.com/docs/typography-plugin)
 > - [shadcn/ui](https://ui.shadcn.com/)
+> - [Typescript](https://www.typescriptlang.org/docs/handbook/intro.html/)
 
 ## Getting Started
 
