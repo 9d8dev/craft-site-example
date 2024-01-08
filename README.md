@@ -6,6 +6,7 @@ Craft UI is a design system and collection of components for developing marketin
 
 > **In order to get the most out of Craft UI**, you will need to be familiar with the following:
 >
+> - [React Components and NextJS](https://nextjs.org/learn/react-foundations/building-ui-with-components)
 > - [Tailwind](https://tailwindcss.com/)
 > - [Tailwind Typography](https://tailwindcss.com/docs/typography-plugin)
 > - [shadcn/ui](https://ui.shadcn.com/)
