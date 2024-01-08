@@ -2,6 +2,13 @@
 
 ## Craft UI is a design system and collection of components for developing marketing websites
 
+### Getting Started
+
+```bash
+npm install -D @tailwindcss/typography
+npm install clsx
+```
+
 ### Dependencies
 
 - [Tailwind](https://tailwindcss.com/)
@@ -34,7 +41,7 @@ Certainly! The provided code snippet is a collection of React components designe
 - **Functionality:** Uses the `clsx` function for conditional and combined class names. Sets global styles like text color and font smoothing.
 - **Usage Example:**
 
-  ```jsx
+  ```tsx
   <Layout className="custom-class">
     {/* Child components go here */}
   </Layout>
@@ -50,7 +57,7 @@ Certainly! The provided code snippet is a collection of React components designe
 - **Functionality:** Combines general prose styles and specific styles for headings, links, and blockquotes.
 - **Usage Example:**
 
-  ```jsx
+  ```tsx
   <Main className="main-content" id="main-section">
     {/* Main content goes here */}
   </Main>
@@ -66,7 +73,7 @@ Certainly! The provided code snippet is a collection of React components designe
 - **Functionality:** Primarily used for grouping content and applying padding.
 - **Usage Example:**
 
-  ```jsx
+  ```tsx
   <Section id="about-section">
     {/* Section content goes here */}
   </Section>
@@ -82,7 +89,7 @@ Certainly! The provided code snippet is a collection of React components designe
 - **Functionality:** Centers content with a maximum width and applies padding.
 - **Usage Example:**
 
-  ```jsx
+  ```tsx
   <Container className="custom-container">
     {/* Container content goes here */}
   </Container>
@@ -98,17 +105,10 @@ Certainly! The provided code snippet is a collection of React components designe
 - **Functionality:** Applies styles suitable for reading, like typography and color scheme adjustments.
 - **Usage Example:**
 
-  ```jsx
+  ```tsx
   <Article id="feature-article">
     {/* Article content goes here */}
   </Article>
   ```
 
 Each of these components is designed to be modular and reusable, making it easy to construct pages with consistent layout and styling. They utilize the `clsx` utility, which is a popular choice in React projects for handling dynamic class names more elegantly.
-
-### Getting Started
-
-```bash
-npm install -D @tailwindcss/typography
-npm install clsx
-```
