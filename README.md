@@ -17,11 +17,11 @@
 ### Parts
 
 - Layout (layout.tsx)
-  - `<Layout />`
-  - `<Main />`
-  - `<Section />`
-  - `<Container />`
-  - `<Article />`
+  - [`<Layout />`](#layout-component)
+  - [`<Main />`](#main-component)
+  - [`<Section />`](#section-component)
+  - [`<Container />`](#container-component)
+  - [`<Article />`](#article-component)
 
 Certainly! The provided code snippet is a collection of React components designed for layout and content structuring in a web application. Let's break down each component to understand its purpose and usage:
 
