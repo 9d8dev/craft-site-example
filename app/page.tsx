@@ -1,4 +1,4 @@
-import * as Layout from "@/components/craft/layout";
+import * as Layout from "@/components/layout";
 import Image from "next/image";
 import Vercel from "@/public/vercel.svg";
 

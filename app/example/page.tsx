@@ -1,4 +1,4 @@
-import * as Layout from "@/components/craft/layout";
+import * as Layout from "@/components/layout";
 
 export default function Home() {
   return (

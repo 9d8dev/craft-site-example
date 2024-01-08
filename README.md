@@ -28,7 +28,7 @@ npm install clsx
 To import all Layout components:
 
 ```tsx
-import * as Layout from "@/components/craft/layout";
+import * as Layout from "@/components/layout";
 ```
 
 - Layout (layout.tsx)
