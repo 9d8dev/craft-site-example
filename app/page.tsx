@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 export default function Home() {
   return (
     <Craft.Main>
-      <Craft.Section>
+      <Craft.Section className="border-b">
         <Craft.Container>
           <h1 className="font-serif lg:text-8xl">
             <Balancer>Welcome to Craft UI</Balancer>
@@ -30,7 +30,7 @@ export default function Home() {
         </Craft.Container>
       </Craft.Section>
 
-      <Craft.Section>
+      <Craft.Section className="border-b">
         <Craft.Container>
           <h3>This is an example of an H3</h3>
           <h4>This is an example of an H4</h4>
