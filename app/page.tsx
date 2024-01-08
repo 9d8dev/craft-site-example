@@ -1,16 +1,19 @@
-import * as Craft from "@/components/layout";
-import Image from "next/image";
-import Vercel from "@/public/vercel.svg";
+import * as Craft from "@/components/craft/layout";
+import Balancer from "react-wrap-balancer";
 
 export default function Home() {
   return (
     <Craft.Main>
       <Craft.Section>
         <Craft.Container>
-          <h1>Welcome to Craft UI</h1>
+          <h1>
+            <Balancer>Welcome to Craft UI</Balancer>
+          </h1>
           <h2>
-            Craft UI is a design system for NextJS Websites. It is built using
-            shadcn/ui, radix ui, and tailwindcss.
+            <Balancer>
+              Craft UI is a design system for NextJS Websites. It is built using
+              shadcn/ui, radix ui, and tailwindcss.
+            </Balancer>
           </h2>
           <h3>This is an example of an H3</h3>
           <h4>This is an example of an H4</h4>
