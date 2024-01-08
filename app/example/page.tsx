@@ -1,4 +1,6 @@
 import * as Layout from "@/components/layout";
+import Image from "next/image";
+import Vercel from "@/public/vercel.svg";
 
 export default function Home() {
   return (
@@ -33,11 +35,13 @@ export default function Home() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec
               justo eget justo cursus ornare.
             </p>
+            <h4>This is an Unordered List</h4>
             <ul>
               <li>Item 1</li>
               <li>Item 2</li>
               <li>Item 3</li>
             </ul>
+            <h4>This is an Ordered List</h4>
             <ol>
               <li>Item 1</li>
               <li>Item 2</li>
@@ -52,6 +56,13 @@ export default function Home() {
             <p>
               Here&apos;s a link: <a href="#">Visit Tailwind CSS</a>
             </p>
+            <Image
+              src={Vercel}
+              alt="The Vercel Logo"
+              className="dark:invert"
+              width={200}
+              height={200}
+            />
           </Layout.Article>
         </Layout.Container>
       </Layout.Section>
