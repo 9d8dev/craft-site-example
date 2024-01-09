@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { Manrope, Instrument_Serif } from 'next/font/google';
 import * as Craft from '@/components/craft/layout';
-import Nav from '@/components/craft/section/nav';
-import Footer from '@/components/craft/section/footer';
+import Nav from '@/components/craft/sections/nav';
+import Footer from '@/components/craft/sections/footer';
 import './globals.css';
 
 const manrope = Manrope({
