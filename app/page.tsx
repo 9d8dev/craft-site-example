@@ -19,7 +19,7 @@ export default function Home() {
               shadcn/ui, radix ui, and tailwindcss.
             </Balancer>
           </h2>
-          <div className="relative border shadow-sm mb-12 w-full lg:h-96 md:h-72 h-48 rounded-md overflow-hidden">
+          <div className="relative border shadow-sm mb-12 w-full lg:h-96 md:h-72 h-48 rounded-xl overflow-hidden">
             <Image
               src={Photo}
               alt="homepage image for craft ui"
