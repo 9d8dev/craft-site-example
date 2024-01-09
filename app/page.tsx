@@ -10,7 +10,7 @@ export default function Home() {
     <Craft.Main>
       <Craft.Section className="border-b">
         <Craft.Container>
-          <h1 className="font-serif lg:text-8xl">
+          <h1 className="font-serif text-5xl lg:text-8xl">
             <Balancer>Welcome to Craft UI</Balancer>
           </h1>
           <h2>
@@ -19,7 +19,7 @@ export default function Home() {
               shadcn/ui, radix ui, and tailwindcss.
             </Balancer>
           </h2>
-          <div className="relative border shadow-sm mb-12 w-full lg:h-96 md:h-72 h-48 rounded-xl overflow-hidden">
+          <div className="relative border shadow-sm w-full lg:h-96 md:h-72 h-48 rounded-xl overflow-hidden">
             <Image
               src={Photo}
               alt="homepage image for craft ui"
@@ -32,11 +32,11 @@ export default function Home() {
 
       <Craft.Section className="border-b">
         <Craft.Container>
-          <h3>This is an example of an H3</h3>
+          <h3 className="mt-0">This is an example of an H3</h3>
           <h4>This is an example of an H4</h4>
           <h5>This is an example of an H5</h5>
           <h6>This is an example of an H6</h6>
-          <p>
+          <p className="mb-0">
             This is a paragraph with an <a href="/">inline link</a>. Lorem ipsum
             dolor sit amet, consectetur adipiscing elit. Nulla nec justo eget
             justo cursus ornare. Lorem ipsum dolor sit amet, consectetur
@@ -50,7 +50,7 @@ export default function Home() {
       <Craft.Section>
         <Craft.Container>
           <Craft.Article>
-            <h2>
+            <h2 className="mt-0">
               <Balancer>
                 This is an example of the {"<Craft.Article/>"} Component
               </Balancer>
@@ -80,13 +80,6 @@ export default function Home() {
             <p>
               Here&apos;s a link: <a href="#">Visit Tailwind CSS</a>
             </p>
-            <Image
-              src={Vercel}
-              alt="The Vercel Logo"
-              className="dark:invert"
-              width={200}
-              height={200}
-            />
           </Craft.Article>
         </Craft.Container>
       </Craft.Section>
