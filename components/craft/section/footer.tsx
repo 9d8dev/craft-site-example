@@ -95,12 +95,12 @@ const Footer = () => {
                 </Link>
               </Button>
             </div>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground hidden sm:block">
               Code © <a href="https://9d8.dev">9d8</a>. 2023-present.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-0">
             <div className="flex flex-col gap-2">
               <h4 className="text-muted-foreground">Craft UI</h4>
               <ul>
@@ -132,6 +132,9 @@ const Footer = () => {
               </ul>
             </div>
           </div>
+          <p className="text-muted-foreground block sm:hidden">
+            Code © <a href="https://9d8.dev">9d8</a>. 2023-present.
+          </p>
         </Craft.Container>
       </Craft.Section>
     </footer>
