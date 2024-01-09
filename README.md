@@ -14,7 +14,8 @@ Craft UI is a design system and collection of components for developing marketin
 
 ## Getting Started
 
-Coming soon ...
+1. [Install Shadcn/ui](https://ui.shadcn.com/docs/installation/next) `npx shadcn-ui@latest init`
+2. 
 
 ## Contributing
 
