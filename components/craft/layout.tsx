@@ -10,7 +10,7 @@ type LayoutProps = {
 
 const Layout = ({ children, className }: LayoutProps) => {
   return (
-    <html lang="en" className={cn("antialiased", className)}>
+    <html lang="en" className={cn("antialiased scroll-smooth focus:scroll-auto", className)}>
       <body className={className}>
         <ThemeProvider
           attribute="class"

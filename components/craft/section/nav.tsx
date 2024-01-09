@@ -4,6 +4,7 @@ import Logo from "@/public/logo.svg";
 import { cn } from "@/lib/utils";
 import { Button } from "../../ui/button";
 import { NavMenu } from "./nav-menu";
+import { MobileNav } from "./mobile-nav";
 
 type NavProps = {
   className?: string;
@@ -41,6 +42,7 @@ const Nav = ({ className, children, id }: NavProps) => {
           <Button asChild>
             <Link href="https://github.com/9d8dev/craft">Get Started</Link>
           </Button>
+          <MobileNav />
         </div>
       </div>
     </nav>

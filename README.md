@@ -14,7 +14,16 @@ Craft UI is a design system and collection of components for developing marketin
 
 ## Getting Started
 
-Coming soon ...
+```bash
+# Install Dependencies
+npm install -D react-wrap-balancer
+npm install -D @tailwindcss/typography
+npm install -D next-themes
+
+# Install shadcn/ui and all components
+npx shadcn-ui@latest init
+npx shadcn-ui@latest add -a 
+``` 
 
 ## Contributing
 
