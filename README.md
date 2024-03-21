@@ -1,4 +1,4 @@
-![craft](https://github.com/9d8dev/craft-ui/assets/57158102/de2f45fe-ed4f-4674-9f5e-68a057e00c05)
+![craft](https://github.com/brijr/craft-ui/assets/57158102/de2f45fe-ed4f-4674-9f5e-68a057e00c05)
 
 # Craft UI
 
@@ -22,8 +22,8 @@ npm install -D next-themes
 
 # Install shadcn/ui and all components
 npx shadcn-ui@latest init
-npx shadcn-ui@latest add -a 
-``` 
+npx shadcn-ui@latest add -a
+```
 
 ## Contributing
 
